@@ -1,0 +1,70 @@
+# Jukebox code voor "Houdoe en Bedankt" van Jeroen van Zelst
+
+couplet1 = [
+    "Hier in onze stad, is het rustig en fijn",
+    "Maar sommige mensen, die willen niet klein",
+    "Ze rijden te hard, door onze straten",
+    "Maar dat brengt ons in gevaar, dat mag niet baten"
+]
+
+couplet2 = [
+    "De kinderen spelen, langs de kant van de weg",
+    "Maar als er hard gereden wordt, dan is het geen pret",
+    "De oudere mensen, moeten ook veilig kunnen wandelen",
+    "Dus laten we samen, voor een veiligere stad zorgen met z'n allen"
+]
+
+refrein = [
+    "30 en bedankt oké oké",
+    "30 en bedankt oké oké",
+    "30 en bedankt, 30 en bedankt",
+    "30 en bedankt oké oké"
+]
+
+brug = [
+    "Dus laten we ons gedrag, eens goed onder de loep nemen",
+    "En ons beseffen, dat we allemaal verantwoordelijk zijn voor ons gedrag",
+    "Want als we ons allemaal aan de regels houden, dan kan iedereen veilig zijn",
+    "En blijft onze stad, een prachtige plek om te zijn"
+]
+
+outro = [
+    "30 en bedankt, dat je veiligheid in onze stad waardeert",
+    "We hopen dat je begrijpt, dat we hier samen aan moeten werken en dat leert"
+]
+
+akkoorden = {
+    "couplet": ["G", "D", "Em", "C"],
+    "refrein": ["C", "G", "D", "Em"],
+    "brug": ["Em", "C", "G", "D"],
+    "outro": ["G", "D", "Em", "C"]
+}
+
+def zing_vers(vers, akkoorden):
+    for regel, akkoord in zip(vers, akkoorden):
+        print(f"{akkoord}: {regel}")
+
+def zing_nummer():
+    print("Couplet 1:")
+    zing_vers(couplet1, akkoorden["couplet"])
+
+    print("\nRefrein:")
+    zing_vers(refrein, akkoorden["refrein"])
+
+    print("\nCouplet 2:")
+    zing_vers(couplet2, akkoorden["couplet"])
+
+    print("\nRefrein:")
+    zing_vers(refrein, akkoorden["refrein"])
+
+    print("\nBrug:")
+    zing_vers(brug, akkoorden["brug"])
+
+    print("\nRefrein:")
+    zing_vers(refrein, akkoorden["refrein"])
+
+    print("\nOutro:")
+    zing_vers(outro, akkoorden["outro"])
+
+# Zing het nummer
+zing_nummer()
